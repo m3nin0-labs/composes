@@ -1,0 +1,18 @@
+version: "3.7"
+services: 
+  postgis:
+    image: kartoza/postgis
+    environment: 
+      POSTGRES_USER: "docker"
+      POSTGRES_PASS: "docker"
+    ports: 
+      - "25432:5432"
+  pgadmin4:
+    image: dpage/pgadmin4
+    environment: 
+      PGADMIN_DEFAULT_EMAIL: "email@email.com"
+      PGADMIN_DEFAULT_PASSWORD: "1234"
+    ports:
+      - "8080:80"
+    links: 
+      - "postgis"
