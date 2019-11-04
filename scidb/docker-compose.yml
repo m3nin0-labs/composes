@@ -1,0 +1,7 @@
+version: "3.7"
+services: 
+  scidb:
+    image: rvernica/scidb:18.1-ext
+    restart: unless-stopped
+    ports: 
+      - "8080:8080"
