@@ -1,0 +1,8 @@
+version: "3.7"
+services: 
+  ubuntu:
+    image: ubuntu:18.04
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+      - "5678:22"
