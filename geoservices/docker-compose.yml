@@ -1,0 +1,18 @@
+version: "3.7"
+services: 
+  geonetwork:
+    image: geonetwork:3.6.0
+    restart: always
+    ports:
+      - 8090:8080
+    environment:
+      DATA_DIR: /var/lib/geonetwork_data
+    volumes:
+      - /data/geonetwork:/var/lib/geonetwork_data
+  geoserver:
+    image: m3nin0/geoserver:2.15.0
+    restart: always
+    ports: 
+      - 8080:8080
+    volumes: 
+      - /data/geoserver:/opt/geoserver/data_dir
