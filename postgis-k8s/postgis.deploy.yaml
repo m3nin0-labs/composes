@@ -1,0 +1,29 @@
+kind: Deployment
+metadata:
+  labels:
+    name: postgis
+  name: postgis
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: postgis    
+  strategy:
+    type: Recreate
+  template:
+    metadata:  
+      labels:
+        name: postgis
+    spec:
+      containers:
+        - name: postgis
+          image: mdillon/postgis:9.6
+          env:
+            - name: POSTGRES_PASSWORD
+              value: docker
+            - name: POSTGRES_USER
+              value: docker
+          ports:
+            - containerPort: 5432
+              protocol: TCP
+status: {}

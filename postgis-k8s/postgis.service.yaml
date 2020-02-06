@@ -1,0 +1,14 @@
+kind: Service
+metadata:
+  name: postgis
+  labels:
+    name: postgis
+spec:
+  ports:
+    - nodePort: 30040
+      port: 5432
+      targetPort: 5432
+      protocol: TCP
+  selector:
+    name: postgis
+  type: NodePort
