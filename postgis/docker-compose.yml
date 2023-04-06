@@ -9,7 +9,7 @@ services:
     ports: 
       - "25432:5432"
   pgadmin4:
-    image: dpage/pgadmin4
+    image: dpage/pgadmin4:2023-04-04-1
     container_name: postgis-admin
     environment: 
       PGADMIN_DEFAULT_EMAIL: "email@email.com"
