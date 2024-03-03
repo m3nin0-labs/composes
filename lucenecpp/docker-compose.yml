@@ -1,0 +1,8 @@
+version: "3"
+
+services:
+  lucenecpp:
+    image: local/lucenecpp:v0.1.0
+    build: .
+    container_name: lucenecpp
+    tty: true
