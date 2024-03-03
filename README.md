@@ -1,3 +1,3 @@
 # composes :octopus:
 
-Dockerfiles and Docker Composes created to quick setup my experiments and development environments.
+Dockerfiles and Docker Composes to set up my experiments and development environments quickly.
