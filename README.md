@@ -1,3 +1,3 @@
 # composes :octopus:
 
-docker-composes created for the quick setup of some environments that I use
+Dockerfiles and Docker Composes created to quick setup my experiments and development environments.
